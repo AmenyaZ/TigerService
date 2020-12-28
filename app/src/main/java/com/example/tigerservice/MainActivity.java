@@ -34,7 +34,11 @@ import org.w3c.dom.Text;
 
 import android.os.Bundle;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView About;
     private View mProgressView;
     private FirebaseAuth mAuth;
+    FirebaseAuth mFirebaseAuth;
+    private FirebaseAuth.AuthStateListener mAuthStatelistener;
     private View mLoginFormView;
     private TextView tvLoad;
 
@@ -78,6 +84,62 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
         });
+
+        mAuthStatelistener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
+                if (mFirebaseUser != null){
+                    Toast.makeText(MainActivity.this, "You are Logged In", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                }else {
+
+                    Toast.makeText(MainActivity.this, "Please LogIn", Toast.LENGTH_SHORT).show();
+                }
+            }
+        };
+
+        LogIn.setOnClickListener(new View.OnClickListener() {
+                                     @Override
+                                     public void onClick(View v) {
+
+                                         String email = UserMail.getText().toString();
+                                         String pass = Password.getText().toString();
+
+                                         if (email.isEmpty()) {
+                                             UserMail.setError("Please Enter Email Address");
+                                         } else if (pass.isEmpty()) {
+                                             Password.setError("Please enter the password");
+                                         } else if (email.isEmpty() && pass.isEmpty()) {
+                                             Toast.makeText(MainActivity.this, "All Fields are Empty", Toast.LENGTH_LONG).show();
+                                         } else if (!(email.isEmpty() && pass.isEmpty())) {
+                                             mFirebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                                                 @Override
+                                                 public void onComplete(@NonNull Task<AuthResult> task) {
+                                                     if (!task.isSuccessful()) {
+                                                         Toast.makeText(MainActivity.this, "LogIn Error, Please Check Your Credentials", Toast.LENGTH_LONG).show();
+                                                     } else {
+                                                         Intent intHome = new Intent(MainActivity.this, SecondActivity.class);
+                                                         startActivity(intHome);
+                                                        // showProgress(true);
+                                                         finish();
+                                                         return;
+                                                     }
+                                                 }
+
+
+                                             });
+                                         }
+
+
+                                     }
+
+
+                                 }
+
+
+        );
+
     }
 
 
