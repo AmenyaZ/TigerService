@@ -34,6 +34,8 @@ import org.w3c.dom.Text;
 
 import android.os.Bundle;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText UserMail;
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView Register;
     private TextView About;
     private View mProgressView;
+    private FirebaseAuth mAuth;
     private View mLoginFormView;
     private TextView tvLoad;
 
@@ -59,6 +62,10 @@ public class MainActivity extends AppCompatActivity {
         mProgressView = (View)findViewById(R.id.login_progress);
         mLoginFormView = (View)findViewById(R.id.login_form);
         tvLoad = (TextView)findViewById(R.id.tvLoad);
+
+        mAuth = FirebaseAuth.getInstance();
+
+
 
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
