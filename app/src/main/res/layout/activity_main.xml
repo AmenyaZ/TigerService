@@ -55,14 +55,16 @@
         android:id="@+id/btWork"
         android:layout_width="170dp"
         android:layout_height="70dp"
-        android:layout_marginTop="48dp"
-        android:background= "@drawable/my_boarder"
+        android:layout_marginBottom="168dp"
+        android:background="@drawable/my_boarder"
         android:fontFamily="sans-serif-black"
         android:text="Want to work?"
-        android:textSize="18sp"
 
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btHire" />
+        app:layout_constraintTop_toBottomOf="@+id/btHire"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

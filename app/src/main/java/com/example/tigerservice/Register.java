@@ -21,7 +21,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.tigerservice.MainActivity;
+import com.example.tigerservice.Register;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -113,8 +113,8 @@ public class Register extends AppCompatActivity {
                                 Toast.makeText(Register.this, "Registration Unsuccessful, Please Retry", Toast.LENGTH_SHORT).show();
                             }
                             else {
-                                startActivity(new Intent(Register.this, MainActivity.class));
-                                //showProgress(true);
+                               startActivity(new Intent(Register.this, Login.class));
+                                showProgress(true);
                                 return;
                             }
                         }
