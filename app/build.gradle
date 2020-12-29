@@ -33,4 +33,9 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+    compile 'com.google.android.gms:play-services:7.5.0' // commenting this lineworks for me
+
+
+
+   // classpath 'com.google.gms:google-services:4.3.4'
 }
