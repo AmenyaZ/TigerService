@@ -15,9 +15,11 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:srcCompat="@drawable/mm"
+            tools:visibility="visible" />
     </androidx.cardview.widget.CardView>
 
 

@@ -1,5 +1,6 @@
 package com.example.tigerservice;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -71,6 +72,9 @@ public class MainActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
 
 
         Register.setOnClickListener(new View.OnClickListener() {
@@ -113,14 +117,15 @@ public class MainActivity extends AppCompatActivity {
                                          } else if (email.isEmpty() && pass.isEmpty()) {
                                              Toast.makeText(MainActivity.this, "All Fields are Empty", Toast.LENGTH_LONG).show();
                                          } else if (!(email.isEmpty() && pass.isEmpty())) {
-                                             mFirebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                                             mFirebaseAuth.signInWithEmailAndPassword(email, pass)
+                                                     .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                                                  @Override
                                                  public void onComplete(@NonNull Task<AuthResult> task) {
                                                      if (!task.isSuccessful()) {
                                                          Toast.makeText(MainActivity.this, "LogIn Error, Please Check Your Credentials", Toast.LENGTH_LONG).show();
-                                                     } else {
-                                                         Intent intHome = new Intent(MainActivity.this, SecondActivity.class);
-                                                         startActivity(intHome);
+                                                     }
+                                                     else {
+                                                         Intent intHome = new Intent(MainActivity.this, SecondActivity.class);startActivity(intHome);
                                                         showProgress(true);
                                                          finish();
                                                          return;

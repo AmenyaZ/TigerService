@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tigerservice.MainActivity;
@@ -62,6 +63,9 @@ public class Register extends AppCompatActivity {
         mProgressView = (View)findViewById(R.id.login_progress);
         mLoginFormView = (View)findViewById(R.id.login_form);
         tvLoad = (TextView)findViewById(R.id.tvLoad);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
 
         Register.setOnClickListener(new View.OnClickListener() {
