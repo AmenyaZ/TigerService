@@ -129,8 +129,8 @@ public class Register extends AppCompatActivity {
         final ClickableSpan clickableSpan1 = new ClickableSpan() {
             @Override
             public void onClick(@NonNull View widget) {
-                //Toast.makeText(Register.this, "Kindly LogIn now", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Register.this, MainActivity.class);
+                Toast.makeText(Register.this, "Kindly LogIn now", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Register.this, Login.class);
                 startActivity(intent);
                 showProgress(true);
                 finish();

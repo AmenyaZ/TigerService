@@ -71,6 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:clickable="true"
         android:fontFamily="sans-serif"
         android:text="Already a user, Login"
         android:textColor="@color/colorBlue"

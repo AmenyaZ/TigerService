@@ -14,6 +14,14 @@
     <string name="loading_please_wait">Loading please wait</string>
     <string name="want_to_hire">Want to hire?</string>
     <string name="want_to_work">Want to work?</string>
+    <string name="others">Others</string>
+    <string name="gardener">Gardener</string>
+    <string name="tailor">Tailor</string>
+    <string name="electician">Electician</string>
+    <string name="mason">Mason</string>
+    <string name="fumigator">Fumigator</string>
+    <string name="painter">Painter</string>
+    <string name="plumber">Plumber</string>
     <!--    <string name="register_here">register_here</string>-->
     <!--    <string name="user_login">User Login</string>-->
     <!--    <string name="enter_password">enter_password</string>-->

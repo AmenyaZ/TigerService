@@ -1,8 +1,10 @@
-package com.example.tigerservice;
+package com.example.tigerservice.Categories;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.tigerservice.R;
 
 public class Categories extends AppCompatActivity {
 
