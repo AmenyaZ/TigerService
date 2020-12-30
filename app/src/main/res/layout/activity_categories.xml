@@ -38,7 +38,7 @@
         android:textSize="18sp"
         android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView4" />
 
@@ -47,98 +47,135 @@
         android:layout_width="386dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
         android:shadowColor="@color/cardview_light_background"
         android:text="  Painter"
         android:textAlignment="viewStart"
         android:textSize="18sp"
-        android:typeface="serif"
 
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="229dp" />
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btPlumber" />
 
     <Button
         android:id="@+id/btFumigator"
         android:layout_width="386dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
         android:shadowColor="@color/cardview_light_background"
         android:text="  Fumigator"
         android:textAlignment="viewStart"
         android:textSize="18sp"
-        android:typeface="serif"
 
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="288dp" />
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btPainter" />
 
     <Button
         android:id="@+id/btMason"
         android:layout_width="386dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
         android:shadowColor="@color/cardview_light_background"
         android:text="  Mason"
         android:textAlignment="viewStart"
         android:textSize="18sp"
-        android:typeface="serif"
 
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="351dp" />
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btFumigator" />
 
     <Button
         android:id="@+id/btElectrcian"
         android:layout_width="386dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
         android:shadowColor="@color/cardview_light_background"
         android:text="  Electician"
         android:textAlignment="viewStart"
         android:textSize="18sp"
-        android:typeface="serif"
 
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="426dp" />
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btMason" />
 
     <Button
         android:id="@+id/btTailor"
         android:layout_width="386dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
         android:shadowColor="@color/cardview_light_background"
         android:text="  Tailor"
         android:textAlignment="viewStart"
         android:textSize="18sp"
-        android:typeface="serif"
 
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="492dp" />
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btElectrcian" />
 
     <Button
         android:id="@+id/Gardener"
         android:layout_width="386dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
         android:shadowColor="@color/cardview_light_background"
         android:text="  Gardener"
         android:textAlignment="viewStart"
         android:textSize="18sp"
-        android:typeface="serif"
 
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="560dp" />
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btTailor" />
 
     <Button
         android:id="@+id/btOthers"
         android:layout_width="386dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
         android:shadowColor="@color/cardview_light_background"
         android:text="  Clamping"
         android:textAlignment="viewStart"
         android:textSize="18sp"
-        android:typeface="serif"
 
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="626dp" />
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Gardener"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
