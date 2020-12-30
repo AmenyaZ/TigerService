@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Categories.MyPainter"></activity>
+        <activity android:name=".Categories.OtherCat"></activity>
+        <activity android:name=".Categories.MyElectrician" />
+        <activity android:name=".Categories.MyFumigator" />
+        <activity android:name=".Categories.MyMason" />
+        <activity android:name=".Categories.MyTailor" />
+        <activity android:name=".Categories.MyGardener" />
+        <activity android:name=".Categories.MyPainter" />
         <activity android:name=".Categories.MyPlumber" />
         <activity android:name=".Categories.Categories" />
         <activity android:name=".Login" />

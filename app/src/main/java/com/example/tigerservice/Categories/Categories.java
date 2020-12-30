@@ -54,50 +54,50 @@ public class Categories extends AppCompatActivity {
             }
         });
 
-        Plumber.setOnClickListener(new View.OnClickListener() {
+        Fumigator.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Categories.this, MyPlumber.class);
+                Intent intent = new Intent(Categories.this, MyFumigator.class);
                 startActivity(intent);
             }
         });
 
-        Plumber.setOnClickListener(new View.OnClickListener() {
+        Mason.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Categories.this, MyPlumber.class);
+                Intent intent = new Intent(Categories.this, MyMason.class);
                 startActivity(intent);
             }
         });
 
-        Plumber.setOnClickListener(new View.OnClickListener() {
+        Electrician.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Categories.this, MyPlumber.class);
+                Intent intent = new Intent(Categories.this, MyElectrician.class);
                 startActivity(intent);
             }
         });
 
-        Plumber.setOnClickListener(new View.OnClickListener() {
+        Tailor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Categories.this, MyPlumber.class);
+                Intent intent = new Intent(Categories.this, MyTailor.class);
                 startActivity(intent);
             }
         });
 
-        Plumber.setOnClickListener(new View.OnClickListener() {
+        Gardener.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Categories.this, MyPlumber.class);
+                Intent intent = new Intent(Categories.this, MyGardener.class);
                 startActivity(intent);
             }
         });
 
-        Plumber.setOnClickListener(new View.OnClickListener() {
+        Others.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Categories.this, MyPlumber.class);
+                Intent intent = new Intent(Categories.this, OtherCat.class);
                 startActivity(intent);
             }
         });
