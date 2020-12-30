@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondActivity">
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageView5"
@@ -41,7 +41,7 @@
         android:layout_marginTop="152dp"
         android:background="#1E88E5"
         android:fontFamily="sans-serif-black"
-        android:text="Want to hire?"
+        android:text="@string/want_to_hire"
         android:textColor="#F3EFEF"
         android:textSize="18sp"
         android:typeface="normal"
@@ -59,7 +59,7 @@
         android:background="@drawable/my_boarder"
         android:fontFamily="sans-serif-black"
 
-        android:text="Want to work?"
+        android:text="@string/want_to_work"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -82,4 +82,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btWork"
         app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

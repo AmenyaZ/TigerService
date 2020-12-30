@@ -12,14 +12,16 @@
     <string name="confirm_your_password">Confirm Your Password</string>
     <string name="already_have_an_account_login">Already have an Account Login</string>
     <string name="loading_please_wait">Loading please wait</string>
+    <string name="want_to_hire">Want to hire?</string>
+    <string name="want_to_work">Want to work?</string>
     <!--    <string name="register_here">register_here</string>-->
-<!--    <string name="user_login">User Login</string>-->
-<!--    <string name="enter_password">enter_password</string>-->
-<!--    <string name="enter_your_username">enter_your_username</string>-->
-<!--    <string name="user_registration">USER REGISTRATION</string>-->
-<!--    <string name="enter_the_first_name">enter_the_first_name</string>-->
-<!--    <string name="type_in_your_password">type_in_your_password</string>-->
-<!--    <string name="confirm_your_password">confirm_your_password</string>-->
-<!--    <string name="enter_your_email">enter_your_email</string>-->
-<!--    <string name="loading_please_wait">loading_please_wait</string>-->
+    <!--    <string name="user_login">User Login</string>-->
+    <!--    <string name="enter_password">enter_password</string>-->
+    <!--    <string name="enter_your_username">enter_your_username</string>-->
+    <!--    <string name="user_registration">USER REGISTRATION</string>-->
+    <!--    <string name="enter_the_first_name">enter_the_first_name</string>-->
+    <!--    <string name="type_in_your_password">type_in_your_password</string>-->
+    <!--    <string name="confirm_your_password">confirm_your_password</string>-->
+    <!--    <string name="enter_your_email">enter_your_email</string>-->
+    <!--    <string name="loading_please_wait">loading_please_wait</string>-->
 </resources>

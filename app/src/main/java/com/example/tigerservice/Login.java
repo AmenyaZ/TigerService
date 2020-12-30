@@ -22,16 +22,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-//import com.google.firebase.auth.FirebaseAuth;
-//import com.google.firebase.auth.FirebaseUser;
-//import com.google.android.gms.tasks.OnCompleteListener;
-//import com.google.android.gms.tasks.Task;
-//import com.google.firebase.auth.AuthResult;
-//import com.google.firebase.auth.FirebaseAuth;
-//import com.google.firebase.auth.FirebaseUser;
-
 public class Login extends AppCompatActivity {
-
 
     private EditText UserMail;
     private EditText Password;
@@ -84,7 +75,7 @@ public class Login extends AppCompatActivity {
                 FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
                 if (mFirebaseUser != null) {
                     Toast.makeText(Login.this, "You are Logged In", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Login.this, SecondActivity.class);
+                    Intent intent = new Intent(Login.this, Categories.class);
                 } else {
 
                     Toast.makeText(Login.this, "Please LogIn", Toast.LENGTH_SHORT).show();
@@ -180,6 +171,6 @@ public class Login extends AppCompatActivity {
             tvLoad.setVisibility(show ? View.VISIBLE : View.GONE);
             mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
         }
+
     }
 }
-

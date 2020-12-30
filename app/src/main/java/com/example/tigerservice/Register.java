@@ -26,7 +26,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-
 public class Register extends AppCompatActivity {
 
     private EditText FName;
@@ -59,7 +58,7 @@ public class Register extends AppCompatActivity {
         Password = (EditText)findViewById(R.id.etPassword);
         Password2 = (EditText)findViewById(R.id.etPassword2);
         Email = (TextView)findViewById(R.id.etEmail);
-        mProgressView = (View)findViewById(R.id.login_progress);
+        mProgressView = (View)findViewById(R.id.register_progress);
         mLoginFormView = (View)findViewById(R.id.login_form);
         tvLoad = (TextView)findViewById(R.id.tvLoad);
 
@@ -112,7 +111,7 @@ public class Register extends AppCompatActivity {
                                 Toast.makeText(Register.this, "Registration Unsuccessful, Please Retry", Toast.LENGTH_SHORT).show();
                             }
                             else {
-                               startActivity(new Intent(Register.this, Login.class));
+                                startActivity(new Intent(Register.this, Login.class));
                                 showProgress(true);
                                 return;
                             }
@@ -133,7 +132,7 @@ public class Register extends AppCompatActivity {
                 //Toast.makeText(Register.this, "Kindly LogIn now", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Register.this, MainActivity.class);
                 startActivity(intent);
-                 showProgress(true);
+                showProgress(true);
                 finish();
                 return;
             }
@@ -177,6 +176,8 @@ public class Register extends AppCompatActivity {
             public void onAnimationEnd(Animator animation) {
                 tvLoad.setVisibility(show ? View.VISIBLE : View.GONE);
             }
+
         });
-    }
+
+        }
 }

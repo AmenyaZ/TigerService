@@ -9,7 +9,7 @@
 
     <!-- View border color and width -->
     <stroke
-        android:width="5dp"
+        android:width="3dp"
         android:color="@color/colorBlue" >
     </stroke>
 
