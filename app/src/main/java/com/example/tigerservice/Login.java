@@ -17,6 +17,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tigerservice.Categories.Categories;
+import com.example.tigerservice.WorkActivity.WorkerProfile;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -105,7 +106,7 @@ public class Login extends AppCompatActivity {
                                                              if (!task.isSuccessful()) {
                                                                  Toast.makeText(Login.this, "LogIn Error, Please Check Your Credentials", Toast.LENGTH_LONG).show();
                                                              } else {
-                                                                 Intent intHome = new Intent(Login.this, Categories.class);
+                                                                 Intent intHome = new Intent(Login.this, WorkerProfile.class);
                                                                  startActivity(intHome);
                                                                  showProgress(true);
                                                                  finish();
