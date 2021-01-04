@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.tigerservice.Categories.Categories;
+import com.example.tigerservice.Viewscreen.HireActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         Hire.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Categories.class);
+                Intent intent = new Intent(MainActivity.this, HireActivity.class);
                 startActivity(intent);
             }
         });

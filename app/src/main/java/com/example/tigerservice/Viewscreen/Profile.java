@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tigerservice.MainActivity;
@@ -24,6 +25,9 @@ public class Profile extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         switch (item.getItemId()) {
 
