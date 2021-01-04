@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bt"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
 
 
@@ -132,7 +132,7 @@
             android:focusable="true"
             android:text="@string/register_here"
             android:textColor="#1E88E5"
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:textStyle="italic"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

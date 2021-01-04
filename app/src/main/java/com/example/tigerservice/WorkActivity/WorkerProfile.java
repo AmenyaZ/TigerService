@@ -36,7 +36,6 @@ import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 
-
 public class WorkerProfile extends AppCompatActivity {
 
     EditText name, phone, location, email;

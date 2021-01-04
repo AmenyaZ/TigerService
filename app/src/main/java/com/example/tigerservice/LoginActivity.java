@@ -58,6 +58,14 @@ public class LoginActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
+        wRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, Register.class);
+                startActivity(intent);
+            }
+        });
+
 
         wLogIn.setOnClickListener(new View.OnClickListener() {
                                      @Override
