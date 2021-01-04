@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tigerservice.R;
@@ -29,8 +30,12 @@ public class WorkerProfile extends AppCompatActivity {
 
         //mStorage =FirebaseStorage.getInstance().getReference();
 
-        mUpload = (Button)findViewById(R.id.btUpload);
-        mImage = (ImageView)findViewById(R.id.ivImage);
+        //mUpload = (Button)findViewById(R.id.btUpload);
+        //mImage = (ImageView)findViewById(R.id.ivImage);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
 
         mUpload.setOnClickListener(new View.OnClickListener() {
             @Override

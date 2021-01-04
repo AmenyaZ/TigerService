@@ -71,7 +71,8 @@ public class LoginActivity extends AppCompatActivity {
                                              Password.setError("Please enter the password");
                                          } else if (email.isEmpty() && pass.isEmpty()) {
                                              Toast.makeText(LoginActivity.this, "All Fields are Empty", Toast.LENGTH_LONG).show();
-                                         } else if (!(email.isEmpty() && pass.isEmpty())) {
+                                         }
+                                         else if (!(email.isEmpty() && pass.isEmpty())) {
                                              mFirebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                                                  @Override
                                                  public void onComplete(@NonNull Task<AuthResult> task) {
@@ -82,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
                                                          startActivity(intHome);
                                                          showProgress(true);
                                                          finish();
-                                                         return;
+                                                         //return;
                                                      }
                                                  }
 
