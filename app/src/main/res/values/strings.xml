@@ -24,6 +24,7 @@
     <string name="plumber">Plumber</string>
     <string name="first_name">First Name</string>
     <string name="second_name">Second Name</string>
+    <string name="No_network">Connection Lost...</string>
     <!--    <string name="register_here">register_here</string>-->
     <!--    <string name="user_login">User Login</string>-->
     <!--    <string name="enter_password">enter_password</string>-->
