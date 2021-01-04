@@ -124,11 +124,12 @@
         <TextView
             android:id="@+id/tvRegister"
             android:layout_width="wrap_content"
-            android:layout_height="28dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10sp"
             android:background="#00000000"
             android:clickable="true"
+            android:focusable="true"
             android:text="@string/register_here"
             android:textColor="#1E88E5"
             android:textSize="15sp"
@@ -137,8 +138,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnLogIn"
-            app:layout_constraintVertical_bias="0.063"
-            android:focusable="true" />
+            app:layout_constraintVertical_bias="0.063" />
 
 
     </LinearLayout>

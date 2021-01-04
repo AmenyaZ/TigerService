@@ -16,76 +16,49 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.tigerservice.Categories.Categories;
 import com.example.tigerservice.WorkActivity.WorkerProfile;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-public class Login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private EditText UserMail;
     private EditText Password;
-    private Button LogIn;
-    private TextView Register;
+    private Button wLogIn;
+    private TextView wRegister;
     private TextView About;
     private View mProgressView;
-    private FirebaseAuth mAuth;
-    FirebaseAuth mFirebaseAuth;
-    private FirebaseAuth.AuthStateListener mAuthStatelistener;
     private View mLoginFormView;
     private TextView tvLoad;
+    FirebaseAuth mFirebaseAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_main);
 
 
-        UserMail = (EditText) findViewById(R.id.etEmail);
-        Password = (EditText) findViewById(R.id.etPassword);
-        LogIn = (Button) findViewById(R.id.btnLogIn);
-        Register = (TextView) findViewById(R.id.tvRegister);
-        About = (TextView) findViewById(R.id.tvAbout);
-        mProgressView = (View) findViewById(R.id.login_progress);
-        mLoginFormView = (View) findViewById(R.id.login_form);
-        tvLoad = (TextView) findViewById(R.id.tvLoad);
+        UserMail = findViewById(R.id.etEmail);
+        Password = findViewById(R.id.etPassword);
+        wLogIn = findViewById(R.id.btnLogIn);
+        wRegister = findViewById(R.id.tvRegister);
+        About = findViewById(R.id.tvAbout);
+        mProgressView = findViewById(R.id.login_progress);
+        mLoginFormView = findViewById(R.id.login_form);
+        tvLoad = findViewById(R.id.tvLoad);
 
-        mAuth = FirebaseAuth.getInstance();
+//        showProgress(true);
+//        tvLoad.setText("Checking Credentials");
+        mFirebaseAuth = FirebaseAuth.getInstance();
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
 
-        Register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Login.this, MainActivity.class);
-
-                startActivity(intent);
-                showProgress(true);
-                finish();
-                return;
-            }
-        });
-
-        mAuthStatelistener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
-                if (mFirebaseUser != null) {
-                    Toast.makeText(Login.this, "You are Logged In", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Login.this, Categories.class);
-                } else {
-
-                    Toast.makeText(Login.this, "Please LogIn", Toast.LENGTH_SHORT).show();
-                }
-            }
-        };
-
-        LogIn.setOnClickListener(new View.OnClickListener() {
+        wLogIn.setOnClickListener(new View.OnClickListener() {
                                      @Override
                                      public void onClick(View v) {
 
@@ -97,25 +70,24 @@ public class Login extends AppCompatActivity {
                                          } else if (pass.isEmpty()) {
                                              Password.setError("Please enter the password");
                                          } else if (email.isEmpty() && pass.isEmpty()) {
-                                             Toast.makeText(Login.this, "All Fields are Empty", Toast.LENGTH_LONG).show();
+                                             Toast.makeText(LoginActivity.this, "All Fields are Empty", Toast.LENGTH_LONG).show();
                                          } else if (!(email.isEmpty() && pass.isEmpty())) {
-                                             mFirebaseAuth.signInWithEmailAndPassword(email, pass)
-                                                     .addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
-                                                         @Override
-                                                         public void onComplete(@NonNull Task<AuthResult> task) {
-                                                             if (!task.isSuccessful()) {
-                                                                 Toast.makeText(Login.this, "LogIn Error, Please Check Your Credentials", Toast.LENGTH_LONG).show();
-                                                             } else {
-                                                                 Intent intHome = new Intent(Login.this, WorkerProfile.class);
-                                                                 startActivity(intHome);
-                                                                 showProgress(true);
-                                                                 finish();
-                                                                 return;
-                                                             }
-                                                         }
+                                             mFirebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                                                 @Override
+                                                 public void onComplete(@NonNull Task<AuthResult> task) {
+                                                     if (!task.isSuccessful()) {
+                                                         Toast.makeText(LoginActivity.this, "LogIn Error, Please Check Your Credentials", Toast.LENGTH_LONG).show();
+                                                     } else {
+                                                         Intent intHome = new Intent(LoginActivity.this, WorkerProfile.class);
+                                                         startActivity(intHome);
+                                                         showProgress(true);
+                                                         finish();
+                                                         return;
+                                                     }
+                                                 }
 
 
-                                                     });
+                                             });
                                          }
 
 
@@ -126,7 +98,6 @@ public class Login extends AppCompatActivity {
 
 
         );
-
     }
 
     /**
@@ -173,6 +144,13 @@ public class Login extends AppCompatActivity {
             tvLoad.setVisibility(show ? View.VISIBLE : View.GONE);
             mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
         }
-
     }
+
+
+
+
+
+
+
+
 }

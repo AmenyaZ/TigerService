@@ -111,7 +111,7 @@ public class Register extends AppCompatActivity {
                                 Toast.makeText(Register.this, "Registration Unsuccessful, Please Retry", Toast.LENGTH_SHORT).show();
                             }
                             else {
-                                startActivity(new Intent(Register.this, Login.class));
+                                startActivity(new Intent(Register.this, LoginActivity.class));
                                 showProgress(true);
                                 return;
                             }
@@ -130,7 +130,7 @@ public class Register extends AppCompatActivity {
             @Override
             public void onClick(@NonNull View widget) {
                 Toast.makeText(Register.this, "Kindly LogIn now", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Register.this, Login.class);
+                Intent intent = new Intent(Register.this, LoginActivity.class);
                 startActivity(intent);
                 showProgress(true);
                 finish();
