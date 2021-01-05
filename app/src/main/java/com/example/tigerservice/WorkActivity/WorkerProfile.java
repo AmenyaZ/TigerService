@@ -99,31 +99,24 @@ public class WorkerProfile extends AppCompatActivity {
         uploadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                mProgress.setVisibility(View.VISIBLE);
-//                uploadDetails();
-//                Toast.makeText(Mechanic.this, "Value : " + autoCompleteTextView.getText().toString().trim(), Toast.LENGTH_SHORT).show();
+
                 receiveEntries();
             }
         });
 
-//        imageBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                choosingPhoto();
-//            }
-//        });
+
     }
 
     private void uploadDetails() {
         if (image_uri != null) {
-            okelloModel();
+            uploadInfo();
         } else {
             Toast.makeText(this, "Empty Uri...Select an Image", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void okelloModel() {
-//        Toast.makeText(this, "Start okello....", Toast.LENGTH_LONG).show();
+    private void uploadInfo() {
+
 
         StorageReference photoReference = storageReference.child(System.currentTimeMillis() + "."
                 + getFileExtension(image_uri));
@@ -138,14 +131,14 @@ public class WorkerProfile extends AppCompatActivity {
             public void onFailure(@NonNull Exception exception) {
 
                 // Handle unsuccessful uploads
-                Toast.makeText(WorkerProfile.this, "Fail...okello", Toast.LENGTH_SHORT).show();
+                Toast.makeText(WorkerProfile.this, "Fail...", Toast.LENGTH_SHORT).show();
 
             }
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(final UploadTask.TaskSnapshot taskSnapshot) {
 
-                Toast.makeText(WorkerProfile.this, "Success...okello", Toast.LENGTH_LONG).show();
+                Toast.makeText(WorkerProfile.this, "Success...", Toast.LENGTH_LONG).show();
 
                 if (taskSnapshot.getMetadata() != null) {
                     if (taskSnapshot.getMetadata().getReference() != null) {
@@ -224,17 +217,7 @@ public class WorkerProfile extends AppCompatActivity {
         startActivity(backIntent);
 //        Toast.makeText(this, "Upload Done Go to Profile", Toast.LENGTH_SHORT).show();
     }
-//    private void uploadDetails() {
-////        receiveEntries();
-//
-//
-////        DatabaseReference MechanicRef = FirebaseDatabase.getInstance().getReference("Mechanics");
-//        String key = mechanicReference.getKey();
-//        MechanicModel  specificMech = new MechanicModel(nameMech, phoneMech, locationMech, emailMech, "https:image");
-//        mechanicReference.child(key).setValue(specificMech);
-//
-//
-//    }
+
 
     private void receiveEntries() {
         nameWork = name.getText().toString().trim();
