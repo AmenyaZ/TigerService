@@ -49,6 +49,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etWorkUserName"
+                android:hint="User Name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawablePadding="8dp"
@@ -81,6 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawablePadding="8dp"
+                android:hint="E - Mail Address"
                 android:inputType="textEmailAddress" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -110,6 +112,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/etWorkPhone"
                 android:inputType="phone"
+                android:hint="Phone Number"
                 android:drawablePadding="8dp"
                 android:padding="8dp"
                 />
@@ -138,6 +141,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:inputType="text"
+                android:hint="Location"
                 android:layout_height="wrap_content"
                 android:id="@+id/etWorkLocation"
                 android:drawablePadding="8dp"
@@ -167,6 +171,7 @@
 
             <AutoCompleteTextView
                 android:id="@+id/specList"
+                android:hint="Specialization"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none"
