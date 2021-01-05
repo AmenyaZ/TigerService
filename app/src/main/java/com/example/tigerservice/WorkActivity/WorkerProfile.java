@@ -116,13 +116,13 @@ public class WorkerProfile extends AppCompatActivity {
 
     private void uploadDetails() {
         if (image_uri != null) {
-            okelloModel();
+            uploadInfo();
         } else {
             Toast.makeText(this, "Empty Uri...Select an Image", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void okelloModel() {
+    private void uploadInfo() {
 //        Toast.makeText(this, "Start okello....", Toast.LENGTH_LONG).show();
 
         StorageReference photoReference = storageReference.child(System.currentTimeMillis() + "."
@@ -138,14 +138,14 @@ public class WorkerProfile extends AppCompatActivity {
             public void onFailure(@NonNull Exception exception) {
 
                 // Handle unsuccessful uploads
-                Toast.makeText(WorkerProfile.this, "Fail...okello", Toast.LENGTH_SHORT).show();
+                Toast.makeText(WorkerProfile.this, "Fail...", Toast.LENGTH_SHORT).show();
 
             }
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(final UploadTask.TaskSnapshot taskSnapshot) {
 
-                Toast.makeText(WorkerProfile.this, "Success...okello", Toast.LENGTH_LONG).show();
+                Toast.makeText(WorkerProfile.this, "Success...", Toast.LENGTH_LONG).show();
 
                 if (taskSnapshot.getMetadata() != null) {
                     if (taskSnapshot.getMetadata().getReference() != null) {
