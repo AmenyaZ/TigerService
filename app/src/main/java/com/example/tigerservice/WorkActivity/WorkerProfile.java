@@ -99,19 +99,12 @@ public class WorkerProfile extends AppCompatActivity {
         uploadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                mProgress.setVisibility(View.VISIBLE);
-//                uploadDetails();
-//                Toast.makeText(Mechanic.this, "Value : " + autoCompleteTextView.getText().toString().trim(), Toast.LENGTH_SHORT).show();
+
                 receiveEntries();
             }
         });
 
-//        imageBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                choosingPhoto();
-//            }
-//        });
+
     }
 
     private void uploadDetails() {
@@ -123,7 +116,7 @@ public class WorkerProfile extends AppCompatActivity {
     }
 
     private void uploadInfo() {
-//        Toast.makeText(this, "Start okello....", Toast.LENGTH_LONG).show();
+
 
         StorageReference photoReference = storageReference.child(System.currentTimeMillis() + "."
                 + getFileExtension(image_uri));
@@ -224,17 +217,7 @@ public class WorkerProfile extends AppCompatActivity {
         startActivity(backIntent);
 //        Toast.makeText(this, "Upload Done Go to Profile", Toast.LENGTH_SHORT).show();
     }
-//    private void uploadDetails() {
-////        receiveEntries();
-//
-//
-////        DatabaseReference MechanicRef = FirebaseDatabase.getInstance().getReference("Mechanics");
-//        String key = mechanicReference.getKey();
-//        MechanicModel  specificMech = new MechanicModel(nameMech, phoneMech, locationMech, emailMech, "https:image");
-//        mechanicReference.child(key).setValue(specificMech);
-//
-//
-//    }
+
 
     private void receiveEntries() {
         nameWork = name.getText().toString().trim();
